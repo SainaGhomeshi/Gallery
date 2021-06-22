@@ -1,0 +1,456 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>نمایشگاه صنایع دستی</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lib/all.min.css">
+    <link href="/panel/css/easy-autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/panel/css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css" />
+    
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="css/lib/custom.css">
+
+	<!-- Modernizer js -->
+    <script src="/user/custom/js/auth.js"></script>
+    <script src="/user/custom/js/apiURL.js"></script>
+	<script src="js/lib/vendor/modernizr-3.5.0.min.js"></script>
+	<script src="js/lib/all.js"></script>
+</head>
+<body style="overflow-y: hidden;" dir="rtl">
+	
+
+	<!-- Add your site or application content here -->
+	
+	<!-- <div class="fakeloader"></div> -->
+
+	<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- Start Header Area -->
+        <%- include('./partials/header.ejs')  %> 
+        <!-- End Header Area -->
+        <!-- Start Slider Area -->
+        <div class="slider__area slider--two">
+            <div class="slider__activation--1">
+                <!-- Start Single Slide -->
+                <div class="slide fullscreen bg-image--7 poss--relative">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                <div class="slider__content">
+                                    <div class="slider__inner">
+                                        <div class="slider__text__img">
+                                            <img class="layear-2" src="images/slider/text/1.png" alt="slider text image">
+                                        </div>
+                                        <%- include('./partials/homePage/searchBar.ejs')  %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide__art">
+                        <img src="images/shape/slider-art.png" alt="art images">
+                    </div>
+                </div>
+                <!-- End Single Slide -->
+            </div>
+        </div>
+        <!-- End Slider Area -->
+        <!-- Start Feature Area -->
+        <section class="art__feature__area section-padding--lg bg--white">
+            <div class="container">
+                <div class="row">
+                    <!-- Start Single Feature -->
+                    <div class="col-md-6 col-lg-4 col-sm-12">
+                        <div class="square">
+                            <div class="feature text-center">
+                                <div class="feature__thumb">
+                                    <a>
+                                        <img src="images/service/1.png" alt="feature images">
+                                    </a>
+                                </div>
+                                <div class="feature__details">
+                                    <h4><a>چرم</a></h4>
+                                    <h6>نواع محصولات چرمی مردانه و زنانه از قبیل کیف، کفش، کمربند، نیم بوت و هدایای چرمی</h6>
+                                    <p>چرم، ماده ای طبیعی، بادوام و منعطف است که از دباغی پوست خام جانوران، به‌ویژه گاو به‌دست می‌آید. فرایند دباغی، پوست فسادپذیر را به یک مادهٔ طبیعی پایدار، دایمی و انعطاف‌پذیر برای کاربردهای گوناگون تبدیل می‌کند. چرم در تلفیق با چوب، پایهٔ فناوری باستانیان را شکل می‌داده‌است.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Feature -->
+                    <!-- Start Single Feature -->
+                    <div class="col-md-6 col-lg-4 col-sm-12 sm--mt--40">
+                        <div class="square">
+                            <div class="feature text-center">
+                                <div class="feature__thumb">
+                                    <a>
+                                        <img src="images/service/2.png" alt="feature images">
+                                    </a>
+                                </div>
+                                <div class="feature__details">
+                                    <h4><a>فرش</a></h4>
+                                    <h6>خرید جدیدترین فرش های ماشینی و دستباف </h6>
+                                    <p>قالی ایرانی یا فرش ایرانی از دیرباز معروف و مورد استفاده بوده، سند آن نیز گزنفون تاریخ‌نگار یونانی در کتاب سیرت کوروش، در بین سال‌های ۴۳۰ تا ۳۴۵ پیش از میلاد می‌نویسد: «ایرانیان برای این‌که بسترشان نرم باشد قالیچه زیر بستر خود می‌گسترند.»</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Feature -->
+                    <!-- Start Single Feature -->
+                    <div class="col-md-6 col-lg-4 col-sm-12 sm--mt--40 md--mt--40">
+                        <div class="square">
+                            <div class="feature text-center">
+                                <div class="feature__thumb">
+                                    <a>
+                                        <img src="images/service/3.png" alt="feature images">
+                                    </a>
+                                </div>
+                                <div class="feature__details">
+                                    <h4><a>میناکاری</a></h4>
+                                    <h6> انواع مدل های بشقاب و ظروف میناکاری</h6>
+                                    <p> میناگری یا میناسازی هنری است که سابقه‌ای در حدود پنج هزار سال دارد و از صنایع دستی محسوب می‌شود. امروزه این هنر بیشتر بر روی مس انجام می‌شود ولی می‌توان بر روی طلا، نقره، سفال نیز آن را به عمل آورد.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Feature -->
+                    <!-- End Single Feature -->
+                </div>
+            </div>
+        </section>
+        <!-- End Feature Area -->
+        <!-- Start Choose us Area -->
+        <section class="art__choose__us__area section-padding--lg bg__cat--4 poss--relative" style="padding: 50px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-lg-12">
+                        <div class="section__title title__style--2 service__align--center">
+                            <h2 class="title__line">چرا باید ما را انتخاب کنید؟</h2>
+                            <p >روندی کاری ما</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-lg-12"> 
+                        <div class="choose__wrap text-center mt--50">
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                            <ul class="at__choose__list d-flex justify-content-center">
+                                <li>1. خاصیت اول</li>
+                                <li>2. خاصیت دوم</li>
+                                <li>3. خاصیت سوم</li>
+                            </ul>
+                            <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی، و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+                            <div class="chooseus__btn">
+                                <a class="art__btn" href="aboutUs">مطالعه بیشتر</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="choose__img--1 wow fadeInRight" data-wow-delay="0.2s">
+                <img src="images/banner/bann-1/1.png" alt="banner images">
+            </div>
+            <div class="choose__img--2 wow fadeInLeft" data-wow-delay="0.3s">
+                <img src="images/banner/bann-1/2.png" alt="banner images">
+            </div>
+        </section>
+        <!-- End Choose us Area -->
+        
+        <%- include('./partials/homePage/category.ejs')  %>
+
+
+        <!-- Start Popular art Area -->
+        <section class="popular__art__area section-padding--lg bg-image--12" style="padding: 50px 0px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="section__title title__style--2 service__align--center section__bg__black">
+                            <h2 class="title__line">بهترین کالا ها</h2>
+                            <p>با بهترین کالا های ما آشنا بشین </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="special__art__menu mt--80" style="padding: 0px">
+                    <div class="art__menu__prl bg-image--4" style="padding: 25px 0px" >
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="art__nav nav nav-tabs tableListContainer" role="tablist">
+                                    </div>
+                                    <div class="at__tab__content tab-content" id="nav-tabContent">
+                                        <!-- Start Single tab -->
+                                        <div class="single__tab__panel tab-pane fade show active" id="nav-all" role="tabpanel">
+                                            <div class="tab__content__wrap">
+                                                <!-- Start Single Tab Content -->
+                                                <div class="single__tab__content rightColumn">
+                                                </div>
+                                                <!-- End Single Tab Content -->
+                                                <!-- Start Single Tab Content -->
+                                                <div class="single__tab__content leftColumn">
+                                                </div>
+                                                <!-- End Single Tab Content -->
+                                            </div>
+                                        </div>
+                                        <!-- End Single tab -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Popular art Area -->
+        <!-- Start Our Team Area -->
+        <section class="art__team__area bg--white section-padding--lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="section__title title__style--2 service__align--center">
+                            <h2 class="title__line">اعضای تیم ما</h2>
+                            <p>با ما آشنا بشین</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt--40 justify-content-center">
+                    <!-- Start Single Team -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 foo">
+                        <div class="team text-center">
+                            <div class="team__thumb">
+                                <a href="aboutUs">
+                                    <img src="/panel/images/users/avatar-1.jpg" alt="team images">
+                                </a>
+                            </div>
+                            <div class="team__content">
+                                <div class="team__info">
+                                    <h4><a href="aboutUs">ساینا قمشی</a></h4>
+                                    <h6>برنامه نویس</h6>
+                                </div>
+                                <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</p>
+                                <ul class="team__social__net">
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Team -->
+                    <!-- Start Single Team -->
+                    <div class="col-lg-4 col-md-6 col-sm-12 foo">
+                        <div class="team text-center">
+                            <div class="team__thumb">
+                                <a href="aboutUs">
+                                    <img src="images/team/team-list/3.jpeg" alt="team images">
+                                </a>
+                            </div>
+                            <div class="team__content">
+                                <div class="team__info">
+                                    <h4><a href="aboutUs">ساینا قمشی</a></h4>
+                                    <h6>برنامه نویس</h6>
+                                </div>
+                                <p>ورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Team -->
+                </div>
+            </div>
+        </section>
+        <!-- End Our Team Area -->
+        <!-- Start Counter Up Area -->
+        <section class="at__counterup__area bg--theme fanfact--2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="counter__up__inner d-flex flex-wrap flex-lg-nowrap flex-md-nowrap justify-content-between text-center">
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__icon">
+                                            <img src="images/icon/flat-icon/4.png" alt="flat icon">
+                                        </div>
+                                        <div class="fact__count ">
+                                            <span class="count">2456</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>غرفه</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__icon">
+                                            <img src="images/icon/flat-icon/5.png" alt="flat icon">
+                                        </div>
+                                        <div class="fact__count ">
+                                            <span class="count">2456</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>محصول</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__icon">
+                                            <img src="images/icon/flat-icon/6.png" alt="flat icon">
+                                        </div>
+                                        <div class="fact__count ">
+                                            <span class="count">2456</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>غرفه دار</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                            <!-- Start Single Fact -->
+                            <div class="funfact">
+                                <div class="fact__details">
+                                    <div class="funfact__count__inner">
+                                        <div class="fact__icon">
+                                            <img src="images/icon/flat-icon/7.png" alt="flat icon">
+                                        </div>
+                                        <div class="fact__count ">
+                                            <span class="count">2456</span>
+                                        </div>
+                                    </div>
+                                    <div class="fact__title">
+                                        <h2>مشتری</h2>
+                                    </div>
+                                </div>
+                            </div> 
+                            <!-- End Single Fact -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Counter Up Area -->
+        <!-- Start Our Brand Area -->
+        <div class="art__brand__area section-padding--lg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="brand__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between pb--60">
+                            <li><a href="#"><img src="images/brand/1.png" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/2.png" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/3.png" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/4.png" alt="brand images"></a></li>
+                            <li><a href="#"><img src="images/brand/5.png" alt="brand images"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Our Brand Area -->
+        <!-- Start Subscribe Area -->
+        <section class="at__subscribe__wrapper bg__cat--6 poss--relative">
+            <div class="at__subscribe__area">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="subscribe__inner subscribe--3">
+                                    <div class="subs__address__content d-flex justify-content-between">
+                                        <div class="subs__address d-flex">
+                                            <div class="sbs__address__icon">
+                                                <i class="fas fa-home" style="font-size: 40px;"></i>
+                                            </div>
+                                            <div class="subs__address__details">
+                                                <p>تهران<br>ایران</p>
+                                            </div>
+                                        </div>
+                                        <div class="subs__address d-flex">
+                                            <div class="sbs__address__icon">
+                                                <i class="fas fa-phone" style="font-size: 40px;"></i>
+                                            </div>
+                                            <div class="subs__address__details">
+                                                <p><a dir="ltr" href="#">+98 912-11111111</a></p>
+                                                <p><a dir="ltr" href="#">+98 021-22222222</a></p>
+                                            </div>
+                                        </div>
+                                        <div class="subs__address d-flex">
+                                            <div class="sbs__address__icon">
+                                                <i class="far fa-envelope" style="font-size: 40px;"></i>
+                                            </div>
+                                            <div class="subs__address__details">
+                                                <p><a href="#">test@email.com</a></p>
+                                                <p><a href="#">test@email.com</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="subscri__shape--1">
+                    <img src="images/banner/bann-4/1.png" alt="banner images">
+                </div>
+                <div class="subscri__shape--2">
+                    <img src="images/banner/bann-4/2.png" alt="banner images">
+                </div>
+            </div>
+        </section>
+        <!-- End Subscribe Area -->
+        <!-- Start Footer Area -->
+        <footer class="footer__area footer--2 phone-footer ">
+            <div class="copyright bg__cat--7">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="copyright__inner">
+                                <div class="cpy__right--left">
+                                    <p>@All Right Reserved.<a >WTIAU</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+        <!-- Login Form -->
+        <%- include('./partials/loginRegister.modal.ejs')  %> 
+        <!-- //Login Form -->
+            <!-- Cartbox -->
+        <%- include('./partials/cartBox.modal.ejs')  %> 
+        <!-- //Cartbox -->
+	</div><!-- //Main wrapper -->
+
+	<!-- JS Files -->
+	<script src="js/lib/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/panel/js/axios.js"></script>
+    <script src="/panel/js/jquery.easy-autocomplete.js"></script>
+    <script src="/user/custom/js/listOfCategories.js"></script>
+    <script src="/user/custom/js/loginRegister.js"></script>
+    <script src="/user/custom/js/shopIdEraeser.js"></script>
+    <script src="/user/custom/js/categoryIdEraeser.js"></script>
+    <script src="/user/custom/js/cartEreaser.js"></script>
+    <script src="/user/custom/js/homePage.js"></script>
+	<script src="js/lib/popper.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/plugins.js"></script>
+	<script src="js/lib/active.js"></script>
+    
+</body>
+
+</html>

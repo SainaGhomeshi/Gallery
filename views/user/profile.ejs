@@ -1,0 +1,179 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>نمایشگاه صنایع دستی</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lib/all.min.css">
+    <link href="/panel/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="/panel/css/easy-autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/panel/css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/user/css/profile.css">
+    
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="css/lib/custom.css">
+
+	<!-- Modernizer js -->
+    <script src="/user/custom/js/auth.js"></script>
+    <script src="/user/custom/js/apiURL.js"></script>
+	<script src="js/lib/vendor/modernizr-3.5.0.min.js"></script>
+	<script src="js/lib/all.js"></script>
+</head>
+<body style="overflow-y: hidden;" dir="rtl">
+	
+
+	<!-- Add your site or application content here -->
+
+    		<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- Start Header Area -->
+        <%- include('./partials/header.ejs')  %> 
+        <!-- End Header Area -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--18">
+            <div class="ht__bradcaump__wrap d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">صفحه پروفایل</h2>
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="/user">صفحه اصلی</a>
+                                    <span class="brd-separetor"><i class="fas fa-arrow-left" style="color: black"></i></span>
+                                    <span class="breadcrumb-item active">صفحه پروفایل</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area --> 
+        <div class="container rounded bg-white mt-5 mb-5">
+            <div class="row">
+                <div class="col-md-3 border-right">
+                    <div class="d-flex flex-column align-items-center text-center p-3 py-5 littleProfile"></div>
+                </div>
+                <div class="col-md-5 border-right">
+                    <div class="p-3 py-5">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">پروفایل کاربری</h4>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-6 text-right"><label class="labels">نام</label><input type="text" class="form-control firstName" placeholder="نام" value=""></div>
+                            <div class="col-md-6 text-right"><label class="labels">نام خانوادگی</label><input type="text" class="form-control lastName" placeholder="نام خانوادگی" value=""></div>
+                            <div class="col-md-6 text-right"><label class="labels">نام کاربری</label><input type="text" class="form-control userName" value="" disabled placeholder="نام کاربری"></div>
+                            <div class="col-md-6 text-right"><label class="labels">کدپستی</label><input type="text" class="form-control postId" value="" placeholder="کدپستی"></div>
+                            <div class="checkout-form col-md-6" style="margin-top: 20px;"><input id="customerCity" placeholder="شهر خود را تایپ کنید"  type="text" class="form-control input-block" value=""/> </div> 
+                        </div>
+                        <div class="row mt-3">
+                            <div class="col-md-12 text-right "><label class="labels">شماره تلفن</label><input type="text" class="form-control phone" placeholder="09122122121" value=""></div>
+                            <div class="col-md-12 text-right "><label class="labels">آدرس ایمیل</label><input disabled type="text" class="form-control email" placeholder="test@mail.com" value=""></div>
+                            <div class="col-md-12 text-right "><label class="labels">آدرس</label><input type="text" class="form-control address" placeholder="قلهک ، خیابان شریعتی ، ..." value=""></div>
+                            
+                        </div>
+                        <div class="mt-5 text-center"><button class="btn btn-primary profile-button editProfile" type="button">ذخیره</button></div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 py-5">
+                        <div class="d-flex flex-column align-items-center shop-history-container w-100 factorContainer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        <!-- Start Footer Area -->
+        <footer class="footer__area footer--1">
+            <div class="col-lg-12 col-md-12" style="padding: 0px;">
+                <div class="subscribe__inner subscribe--3" style="top: 0">
+                        <div class="subs__address__content d-flex justify-content-between">
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-home" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p>تهران<br>ایران</p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-phone" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a dir="ltr" href="#">+98 912-11111111</a></p>
+                                                <p><a dir="ltr" href="#">+98 021-22222222</a></p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="far fa-envelope" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a href="#">test@email.com</a></p>
+                                                <p><a href="#">test@email.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="copyright bg--theme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="copyright__inner">
+                                <div class="cpy__right--left">
+                                    <p>@All Right Reserved.<a >WTIAU</a></p>
+                                </div>
+                                <div class="cpy__right--right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+         <!-- Login Form -->
+       <%- include('./partials/loginRegister.modal.ejs')  %> 
+       <!-- //Login Form -->
+           <!-- Cartbox -->
+       <%- include('./partials/cartBox.modal.ejs')  %> 
+       <!-- //Cartbox -->      
+	</div><!-- //Main wrapper -->
+	
+	<!-- <div class="fakeloader"></div> -->
+
+
+
+	<!-- JS Files -->
+	<script src="js/lib/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/panel/js/axios.js"></script>
+    <script src="/panel/js/jquery.easy-autocomplete.js"></script>
+    <script src="/user/custom/js/listOfCategories.js"></script>
+    <script src="/user/custom/js/loginRegister.js"></script>
+    <script src="/user/custom/js/shopIdEraeser.js"></script>
+    <script src="/user/custom/js/cartEreaser.js"></script>
+    <script src="/user/custom/js/categoryIdEraeser.js"></script>
+	<script src="js/lib/popper.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/plugins.js"></script>
+	<script src="js/lib/active.js"></script>
+    <script src="/user/custom/js/profile.js"></script>
+    
+</body>
+
+</html>

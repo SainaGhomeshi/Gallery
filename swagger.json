@@ -1,0 +1,1941 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Saina Gallery RESTful API",
+        "description": "SainaGallery API documentation"
+    },
+    "tags": [
+        {
+            "name": "api",
+            "description": "API - General And non-registered users!!"
+        },
+        {
+            "name": "users",
+            "description": "CUSTOMER - Registered Users"
+        },
+        {
+            "name": "seller",
+            "description": "SELLER - Seller CRUD and Controls"
+        },
+        {
+            "name": "superAdmin",
+            "description": "SUPER ADMIN - Super Admin CRUD and Controls"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/api/login": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Login",
+                "description": "Login Route 2222",
+                "operationId": "login",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "login",
+                        "in": "body",
+                        "description": "Login Parameters",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    },
+                    "400": {
+                        "description": "Invalid Status Value"
+                    }
+                }
+            }
+        },
+        "/api/register": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Register a New User",
+                "description": "User Can Register using this Route",
+                "operationId": "register",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "register",
+                        "description": "Register a New User",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    },
+                    "400": {
+                        "description": "Invalid Status Value"
+                    }
+                }
+            }
+        },
+        "/api/sellerlogin": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Seller Login",
+                "description": "Seller Login Route",
+                "operationId": "sellerlogin",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "login",
+                        "in": "body",
+                        "description": "Login Parameters",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/login"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    },
+                    "400": {
+                        "description": "Invalid Status Value"
+                    }
+                }
+            }
+        },
+        "/api/sellerregister": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Register a New Seller",
+                "description": "User Can Register using this Route as Seller",
+                "operationId": "sellerregister",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "register",
+                        "description": "Register a New User",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/seller"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    },
+                    "400": {
+                        "description": "Invalid Status Value"
+                    }
+                }
+            }
+        },
+        "/api/addsuperadmin": {
+            "post": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Add Superadmin",
+                "description": "Register new Superadmin",
+                "operationId": "registersuperadmin",
+                "produces": [
+                    "application/xml",
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addsuperadmin",
+                        "in": "body",
+                        "description": "Register new Superadmin",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Successful Operation"
+                    },
+                    "400": {
+                        "description": "Invalid Status Value"
+                    }
+                }
+            }
+        },
+        "/api/province": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get one Province",
+                "description": "Get one Province",
+                "operationId": "getoneprovinces",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id",
+                        "description": "Province id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/provinces": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get all Provinces",
+                "description": "Get all Provinces",
+                "operationId": "getallprovinces",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "search",
+                        "default": "",
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/city": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get one City",
+                "description": "Get one City",
+                "operationId": "getonecity",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id",
+                        "description": "City id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/cities": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get all Cities",
+                "description": "Get all Cities",
+                "operationId": "getallcities",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "search",
+                        "default": "",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "province"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/category": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get one Category",
+                "description": "Get one Category",
+                "operationId": "getonecategory",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id",
+                        "description": "Category id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/categories": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get all cate",
+                "description": "Get all Categories",
+                "operationId": "getallcategories",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "description": "Send only if you want pagination "
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "search",
+                        "default": "",
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/product": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get one product",
+                "description": "Get one product",
+                "operationId": "getoneproduct",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id",
+                        "description": "product id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/products": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get all products",
+                "description": "Get all products",
+                "operationId": "getallproducts",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "description": "Send only if you want pagination "
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "search",
+                        "default": "",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "gallery"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "seller"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "category"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/gallery": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get one Gallery",
+                "description": "Get one Gallery",
+                "operationId": "getonegallery",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id",
+                        "description": "Gallery id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/galleries": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get all galleries",
+                "description": "Get all galleries",
+                "operationId": "getallgalleries",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "description": "Send only if you want pagination "
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "search",
+                        "default": "",
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/emailconfirm": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Send Email Confirmation Code",
+                "description": "Send Email Confirmation Code",
+                "operationId": "sendemailcode",
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/verifyemail": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Verify Email Confirmation Code",
+                "description": "Verify Email Confirmation Code",
+                "operationId": "verifyemailcode",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "code"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/profile": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get current user Profile or by id",
+                "description": "Get Current User Profile",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "Send if this is not current user",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/editprofile": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Edit current user Profile",
+                "description": "Edit Current User Profile",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addsuperadmin",
+                        "in": "body",
+                        "description": "Register new Superadmin",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/users"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/editavatar": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Edit current User Avatar",
+                "description": "Edit Current User Avatar",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "userAvatar",
+                        "type": "file",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/editemail": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Edit Current user Email",
+                "description": "Edit Current User Email",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "Edit Email",
+                        "description": "Edit Email",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/editemail"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/editproductfromcart": {
+            "post": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Edit Product from Cart",
+                "description": "Edit Product from Cart",
+                "operationId": "editproducttocart",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "edit Product from Cart",
+                        "description": "edit Product from Cart",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/ptc"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/changequantity": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Change Product Quantity in Cart",
+                "description": "Change Product Quantity in Cart",
+                "operationId": "changeproductquantityincart",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "product id"
+                    },
+                    {
+                        "in": "query",
+                        "name": "operation",
+                        "description": "true or false = (true will increase, false will decrease)"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/buyproducts": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Buy Products",
+                "description": "buy prducts that are in cart",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/forgetpassword": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Change Password",
+                "description": "Change Password by Email",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "email",
+                        "in": "query",
+                        "description": "Email"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/acceptpassword": {
+            "put": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Accept new Password",
+                "description": "Accept new password",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "new password",
+                        "in": "body",
+                        "description": "New Password and Details",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "password": {
+                                    "type": "string",
+                                    "example": "12345678"
+                                },
+                                "code": {
+                                    "type": "string",
+                                    "example": "887443"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/editgallery": {
+            "put": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Edit current seller Gallery",
+                "description": "Edit Current seller Gallery",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "editgallery",
+                        "in": "body",
+                        "description": "edit gallery",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/gallery"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/editavatar": {
+            "put": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Edit current Gallery Avatar",
+                "description": "Edit Current Gallery Avatar",
+                "operationId": "",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "galleryAvatar",
+                        "type": "file",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/product": {
+            "post": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Add New Product",
+                "description": "Add Product",
+                "operationId": "newproduct",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "productImage",
+                        "type": "file",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "category",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "number",
+                        "type": "number",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "price",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "isDiscounted",
+                        "type": "boolean",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "priceWithDiscount",
+                        "type": "string",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Edit a product",
+                "description": "Edit product",
+                "operationId": "editproduct",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "type": "string"
+                    },
+                    {
+                        "name": "productImage",
+                        "type": "file",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "category",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "number",
+                        "type": "number",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "price",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "isDiscounted",
+                        "type": "boolean",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "priceWithDiscount",
+                        "type": "string",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Delete one product",
+                "description": "Delete one product",
+                "operationId": "deleteproduct",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "Delete one Province by id",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/superadmin/resetpassword": {
+            "get": {
+                "tags": [
+                    "superAdmin",
+                    "superAdmin"
+                ],
+                "summary": "Reset password",
+                "description": "Reset Password all users",
+                "operationId": "",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/superadmin/changeblock": {
+            "get": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Change User Block Condition",
+                "description": "Block Condition",
+                "operationId": "changeuserblockcondition",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "condition",
+                        "in": "query",
+                        "type": "boolean"
+                    },
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "in": "query",
+                        "description": "User ID"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/superadmin/province": {
+            "post": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Add New Province",
+                "description": "Add Province",
+                "operationId": "newprovince",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "Add Province",
+                        "description": "Add new Province",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/province"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Edit a Province",
+                "description": "Edit Province",
+                "operationId": "editcountry",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "edit Province",
+                        "description": "Add new Province",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/province"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Delete one Province",
+                "description": "Delete one Province",
+                "operationId": "deleteprovince",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "Delete one Province by id",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/superadmin/city": {
+            "post": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Add New City",
+                "description": "Add City",
+                "operationId": "newcity",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "Add City",
+                        "description": "Add new City",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/city"
+                        }
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Edit a City",
+                "description": "Edit City",
+                "operationId": "editcity",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "Add City",
+                        "description": "Add new City",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/city"
+                        }
+                    },
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Delete one City",
+                "description": "Delete one City",
+                "operationId": "deletecity",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "Delete one City by id",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/superadmin/category": {
+            "post": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Add New Category",
+                "description": "Add Category",
+                "operationId": "newcategory",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "categoryImage",
+                        "type": "file",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "put": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Edit a Category",
+                "description": "Edit Category",
+                "operationId": "editcategory",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "name",
+                        "type": "string",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "categoryImage",
+                        "type": "file",
+                        "in": "formData"
+                    },
+                    {
+                        "name": "id",
+                        "type": "string",
+                        "in": "query"
+                    },
+                    {
+                        "name": "description",
+                        "type": "string",
+                        "in": "formData"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            },
+            "delete": {
+                "tags": [
+                    "superAdmin"
+                ],
+                "summary": "Delete a Category",
+                "description": "Delete a Category",
+                "operationId": "deletecategory",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "query",
+                        "name": "id",
+                        "description": "Delete one Category by id",
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get all Users",
+                "description": "Get all Users",
+                "operationId": "getallusers",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "search",
+                        "default": "",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "role",
+                        "default": "customer",
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/user": {
+            "get": {
+                "tags": [
+                    "api"
+                ],
+                "summary": "Get One User",
+                "description": "Get One User",
+                "operationId": "getoneuser",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/userfactors": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get all current user factors",
+                "description": "Get all current user factors",
+                "operationId": "getalluserfactors",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "condition",
+                        "default": "pending",
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/customer/userfactor": {
+            "get": {
+                "tags": [
+                    "users"
+                ],
+                "summary": "Get One user Factor",
+                "description": "Get One user Factor",
+                "operationId": "getoneuserfactor",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/galleryfactors": {
+            "get": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Get all current seller galleries factors",
+                "description": "Get all current seller galleries factors",
+                "operationId": "getallsellergalleriesfactors",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "page",
+                        "default": "1",
+                        "collectionFormat": "multi"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "condition",
+                        "default": "pending",
+                        "collectionFormat": "multi"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/galleryfactor": {
+            "get": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "Get One Gallery Factor",
+                "description": "Get One Gallery Factor",
+                "operationId": "getonegalleryfactor",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/changefactorcondition": {
+            "get": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "change factor condition",
+                "description": " change factor condition",
+                "operationId": "changefactorcondition",
+                "parameters": [
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "id"
+                    },
+                    {
+                        "in": "query",
+                        "type": "string",
+                        "name": "condition"
+                    }
+                ],
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        },
+        "/api/seller/changeadsstatus": {
+            "get": {
+                "tags": [
+                    "seller"
+                ],
+                "summary": "change ads status",
+                "description": " change ads status",
+                "operationId": "changeadsstatus",
+                "responses": {
+                    "405": {
+                        "description": "Invalid input"
+                    }
+                },
+                "security": [
+                    {
+                        "Authorization": []
+                    }
+                ]
+            }
+        }
+    },
+    "securityDefinitions": {
+        "Authorization": {
+            "type": "apiKey",
+            "in": "header",
+            "name": "Authorization"
+        }
+    },
+    "definitions": {
+        "login": {
+            "type": "object",
+            "properties": {
+                "email": {
+                    "type": "string",
+                    "example": "imanw77@gmail.com"
+                },
+                "password": {
+                    "type": "string",
+                    "example": "123456"
+                }
+            },
+            "xml": {
+                "name": "login"
+            }
+        },
+        "users": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string",
+                    "example": "Iman - [REGISTER]"
+                },
+                "lastName": {
+                    "type": "string",
+                    "example": "Veisi - [REGISTER]"
+                },
+                "password": {
+                    "type": "string",
+                    "example": "123456 - [ONLY ON REGISTER]"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "imanw77@gmail.com - [ONLY ON REGISTER]"
+                }
+            },
+            "xml": {
+                "name": "users"
+            }
+        },
+        "seller": {
+            "type": "object",
+            "properties": {
+                "firstName": {
+                    "type": "string",
+                    "example": "Iman"
+                },
+                "lastName": {
+                    "type": "string",
+                    "example": "Veisi"
+                },
+                "password": {
+                    "type": "string",
+                    "example": "123456"
+                },
+                "email": {
+                    "type": "string",
+                    "example": "imanw77@gmail.com"
+                }
+            },
+            "xml": {
+                "name": "seller"
+            }
+        },
+        "province": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "کرمانشاه"
+                }
+            },
+            "xml": {
+                "name": "province"
+            }
+        },
+        "city": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "سرپل ذهاب"
+                },
+                "province": {
+                    "type": "string",
+                    "example": "province id"
+                }
+            },
+            "xml": {
+                "name": "city"
+            }
+        },
+        "ptc": {
+            "type": "object",
+            "properties": {
+                "operation": {
+                    "type": "boolean",
+                    "example": true
+                },
+                "product": {
+                    "type": "string",
+                    "example": "product id"
+                },
+                "number": {
+                    "type": "number",
+                    "example": 4
+                }
+            },
+            "xml": {
+                "name": "ptc"
+            }
+        },
+        "gallery": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "example": "گالری ساینا"
+                },
+                "address": {
+                    "type": "string",
+                    "example": "دزفول"
+                },
+                "description": {
+                    "type": "string",
+                    "example": "گالری نقاشی های من"
+                }
+            },
+            "xml": {
+                "name": "gallery"
+            }
+        }
+    }
+}

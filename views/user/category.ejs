@@ -1,0 +1,190 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>نمایشگاه صنایع دستی</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lib/all.min.css">
+    <link href="/panel/css/easy-autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/panel/css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css" />
+    
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="css/lib/custom.css">
+
+	<!-- Modernizer js -->
+    <script src="/user/custom/js/auth.js"></script>
+    <script src="/user/custom/js/apiURL.js"></script>
+	<script src="js/lib/vendor/modernizr-3.5.0.min.js"></script>
+	<script src="js/lib/all.js"></script>
+</head>
+<body style="overflow-y: hidden;" dir="rtl">
+	
+
+	<!-- Add your site or application content here -->
+
+    		<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- Start Header Area -->
+        <%- include('./partials/header.ejs')  %> 
+        <!-- End Header Area -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--18">
+            <div class="ht__bradcaump__wrap d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">اطلاعات دسته بندی</h2>
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="/user/">صفحه اصلی</a>
+                                    <span class="brd-separetor"><i class="fas fa-arrow-left" style="color: black"></i></span>
+                                    <span class="breadcrumb-item active">اطلاعات دسته بندی</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area --> 
+        <!-- Start Blog List View Area -->
+        <section class="blog__list__view section-padding--lg menudetails-right-sidebar bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12 col-sm-12 categoryProductRowContainer">
+                        <div class="art__menu__container">
+                            <div class="art__menu__inner d-flex flex-wrap flex-md-nowrap flex-lg-nowrap">
+                                <div class="art__menu__thumb categoryImage">
+                                </div>
+                                <div class="food__menu__details">
+                                    <div class="food__menu__content text-right" style="margin-right: 10px">
+                                        <h2 class="categoryName"></h2>
+                                        <p class="categoryDescription"></p>
+                                        <div class="product-action-wrap">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="popupal__menu text-right">
+                                    <h4>محصولات</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Blog List View Area -->
+        <!-- Start Footer Area -->
+        <footer class="footer__area footer--1">
+            <div class="col-lg-12 col-md-12" style="padding: 0px;">
+                <div class="subscribe__inner subscribe--3" style="top: 0">
+                        <div class="subs__address__content d-flex justify-content-between">
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-home" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p>تهران<br>ایران</p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-phone" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a dir="ltr" href="#">+98 912-11111111</a></p>
+                                                <p><a dir="ltr" href="#">+98 021-22222222</a></p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="far fa-envelope" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a href="#">test@email.com</a></p>
+                                                <p><a href="#">test@email.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="copyright bg--theme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="copyright__inner">
+                                <div class="cpy__right--left">
+                                    <p>@All Right Reserved.<a >WTIAU</a></p>
+                                </div>
+                                <div class="cpy__right--right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+         <!-- Login Form -->
+       <%- include('./partials/loginRegister.modal.ejs')  %> 
+       <!-- //Login Form -->
+           <!-- Cartbox -->
+       <%- include('./partials/cartBox.modal.ejs')  %> 
+       <!-- //Cartbox -->      
+	</div><!-- //Main wrapper -->
+	
+	<!-- <div class="fakeloader"></div> -->
+
+
+
+	<!-- JS Files -->
+	<script src="js/lib/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/panel/js/axios.js"></script>
+    <script src="/panel/js/jquery.easy-autocomplete.js"></script>
+    <script src="/user/custom/js/listOfCategories.js"></script>
+    <script src="/user/custom/js/loginRegister.js"></script>
+    <script src="/user/custom/js/shopIdEraeser.js"></script>
+    <script src="/user/custom/js/cartEreaser.js"></script>
+	<script src="js/lib/popper.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/plugins.js"></script>
+	<script src="js/lib/active.js"></script>
+    <script src="/user/custom/js/categoryPage.js"></script>
+    
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

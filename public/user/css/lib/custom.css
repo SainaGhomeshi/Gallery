@@ -1,0 +1,47 @@
+/*********************************************************************************
+
+	Template Name: Template full name  
+	Template URI: https://themeforest.net/user/
+	Description: Template description
+	Author: author name
+	Author URI: author uri
+	Version: 1.0
+
+	Note: This is main css. All plugins css files import here.
+
+**********************************************************************************/
+
+.header-direction{
+	direction: rtl;
+}
+
+.min-width{
+	min-width: none;
+}
+
+.phone-opacity{
+	opacity: 0;
+}
+
+.phone-footer{
+	direction: rtl;
+}
+
+
+@media screen and (max-width: 991px) {
+	.header-direction{
+		direction: ltr;
+	}
+
+	.min-width{
+		min-width: 300px;
+	}
+	
+	.phone-opacity{
+		opacity: 1 !important;
+	}
+
+	.phone-footer{
+		direction: ltr ;
+	}
+}

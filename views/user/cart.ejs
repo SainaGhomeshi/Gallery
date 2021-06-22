@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>نمایشگاه صنایع دستی</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lib/all.min.css">
+    <link href="/panel/css/easy-autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/panel/css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css" />
+    
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="css/lib/custom.css">
+
+	<!-- Modernizer js -->
+    <script src="/user/custom/js/auth.js"></script>
+    <script src="/user/custom/js/apiURL.js"></script>
+	<script src="js/lib/vendor/modernizr-3.5.0.min.js"></script>
+	<script src="js/lib/all.js"></script>
+</head>
+<body style="overflow-y: hidden;" dir="rtl">
+	
+
+	<!-- Add your site or application content here -->
+
+    		<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- Start Header Area -->
+        <%- include('./partials/header.ejs')  %> 
+        <!-- End Header Area -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--18">
+            <div class="ht__bradcaump__wrap d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">سبد خرید</h2>
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="../index.html">صفحه اصلی</a>
+                                    <span class="brd-separetor"><i class="fas fa-arrow-left" style="color: black"></i></span>
+                                    <span class="breadcrumb-item active">سبد</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area --> 
+        <!-- cart-main-area start -->
+        <div class="cart-main-area section-padding--lg bg--white">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 ol-lg-12">
+                        <form action="#">               
+                            <div class="table-content table-responsive">
+                                <table>
+                                    <thead>
+                                        <tr class="title-top">
+                                            <th class="product-thumbnail">تصویر</th>
+                                            <th class="product-name">محصول</th>
+                                            <th class="product-price">قیمت</th>
+                                            <th class="product-quantity">تعداد</th>
+                                            <th class="product-subtotal">مجموع</th>
+                                            <th class="product-remove">حذف</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </form> 
+                        <div class="cartbox__btn">
+                            <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-around">
+                                <li><a href="#" onclick="reloadCart()">به روز رسانی سبد</a></li>
+                                <li><a href="#" class="goToCheckOut">پردازش خرید</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 offset-lg-6">
+                        <div class="cartbox__total__area">
+                            <div class="cart__total__amount">
+                                <span>مجموع کل</span>
+                                <span class="totalBuy"> </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </div>
+        <!-- cart-main-area end -->
+        <!-- End Blog List View Area -->
+        <!-- Start Footer Area -->
+        <footer class="footer__area footer--1">
+            <div class="col-lg-12 col-md-12" style="padding: 0px;">
+                <div class="subscribe__inner subscribe--3" style="top: 0">
+                        <div class="subs__address__content d-flex justify-content-between">
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-home" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p>تهران<br>ایران</p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-phone" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a dir="ltr" href="#">+98 912-11111111</a></p>
+                                                <p><a dir="ltr" href="#">+98 021-22222222</a></p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="far fa-envelope" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a href="#">test@email.com</a></p>
+                                                <p><a href="#">test@email.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="copyright bg--theme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="copyright__inner">
+                                <div class="cpy__right--left">
+                                    <p>@All Right Reserved.<a >WTIAU</a></p>
+                                </div>
+                                <div class="cpy__right--right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+         <!-- Login Form -->
+       <%- include('./partials/loginRegister.modal.ejs')  %> 
+       <!-- //Login Form -->
+           <!-- Cartbox -->
+       <%- include('./partials/cartBox.modal.ejs')  %> 
+       <!-- //Cartbox -->      
+	</div><!-- //Main wrapper -->
+	
+	<!-- <div class="fakeloader"></div> -->
+
+
+
+	<!-- JS Files -->
+	<script src="js/lib/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/panel/js/axios.js"></script>
+    <script src="/panel/js/jquery.easy-autocomplete.js"></script>
+    <script src="/user/custom/js/listOfCategories.js"></script>
+    <script src="/user/custom/js/loginRegister.js"></script>
+    <script src="/user/custom/js/shopIdEraeser.js"></script>
+    <script src="/user/custom/js/categoryIdEraeser.js"></script>
+	<script src="js/lib/popper.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/plugins.js"></script>
+	<script src="js/lib/active.js"></script>
+    <script src="/user/custom/js/cartEreaser.js"></script>
+    <script src="/user/custom/js/cart.js"></script>
+    
+</body>
+
+</html>

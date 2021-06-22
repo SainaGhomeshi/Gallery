@@ -1,0 +1,79 @@
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #680505
+}
+
+.profile-button {
+    background: #680505;
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #680505
+}
+
+.profile-button:focus {
+    background: #680505;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #680505;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #680505;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+.shop-history-container{
+    width: 100%;
+    overflow-y: auto;
+    height: 600px;
+}
+
+.shop-history-item-container{
+    width: 95%;
+    border: 2px solid #680505;
+    border-radius: 20px;
+    margin: 10px 0px;
+}
+
+.shop-history-item-header{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom: 2px solid #680505;
+}
+
+.date-section{
+    color: #680505;
+    margin: auto 10px;
+}
+
+.total-price-button {
+    background: #680505;
+    box-shadow: none;
+    border: none;
+    margin: 12px 20px;
+    font-size: 12px ;
+}
+
+.total-price-button:disabled{
+    background: #680505;
+    border: 0px solid white;
+    opacity: 1;
+}

@@ -1,0 +1,210 @@
+<!doctype html>
+<html class="no-js" lang="zxx">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>نمایشگاه صنایع دستی</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<link rel="apple-touch-icon" href="images/icon.png">
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="css/lib/bootstrap.min.css">
+	<link rel="stylesheet" href="css/lib/plugins.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/lib/all.min.css">
+    <link href="/panel/css/easy-autocomplete.css" rel="stylesheet" type="text/css" />
+    <link href="/panel/css/easy-autocomplete.themes.css" rel="stylesheet" type="text/css" />
+    
+	<!-- Cusom css -->
+   <link rel="stylesheet" href="css/lib/custom.css">
+
+	<!-- Modernizer js -->
+    <script src="/user/custom/js/auth.js"></script>
+    <script src="/user/custom/js/apiURL.js"></script>
+	<script src="js/lib/vendor/modernizr-3.5.0.min.js"></script>
+	<script src="js/lib/all.js"></script>
+</head>
+<body style="overflow-y: hidden;" dir="rtl">
+	
+
+	<!-- Add your site or application content here -->
+
+    		<!-- Main wrapper -->
+	<div class="wrapper" id="wrapper">
+		<!-- Start Header Area -->
+        <%- include('./partials/header.ejs')  %> 
+        <!-- End Header Area -->
+        <!-- Start Bradcaump area -->
+        <div class="ht__bradcaump__area bg-image--18">
+            <div class="ht__bradcaump__wrap d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="bradcaump__inner text-center">
+                                <h2 class="bradcaump-title">پردازش خرید</h2>
+                                <nav class="bradcaump-inner">
+                                    <a class="breadcrumb-item" href="../index.html">صفحه اصلی</a>
+                                    <span class="brd-separetor"><i class="fas fa-arrow-left" style="color: black"></i></span>
+                                    <span class="breadcrumb-item active">پردازش خرید</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Bradcaump area --> 
+         <section class="htc__checkout bg--white section-padding--lg">
+            <!-- Checkout Section Start-->
+            <div class="checkout-section">
+                <div class="container">
+                    <div class="row">
+                       
+                        <div class="col-lg-6 col-12 mb-30">
+                               
+                                <!-- Checkout Accordion Start -->
+                                <div id="checkout-accordion" class="customerDetailForm">
+                                   
+                                   
+                                    
+                                    <!-- Billing Method -->
+                                    <div class="single-accordion">
+                                        <a class="accordion-head" data-toggle="collapse" data-parent="#checkout-accordion" href="#billing-method"> تکمیل اطلاعات</a>
+                                        <div id="billing-method" class="collapse show">
+
+                                            <div class="accordion-body billing-method fix">
+
+                                                <%- include('./partials/checkout/firstPersonForm.ejs')  %> 
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Shipping Method -->
+                                    <div class="single-accordion">
+                                        <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion" href="#shipping-method"> اطلاعات ارسال</a>
+                                        <div id="shipping-method" class="collapse">
+                                            <div class="accordion-body text-right shipping-method fix">
+                                               
+                                                <h5>آدرس ارسال</h5>
+                                                <p><span>آدرس فعلی&nbsp;</span> : <p class="firstPersonAddressShower"></p></p>
+                                                
+                                                <button class="shipping-form-toggle secondPersonToggle">ارسال به آدرس متفاوت</button>
+                                                
+                                                <%- include('./partials/checkout/secondPersonForm.ejs')  %> 
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div><!-- Checkout Accordion Start -->
+                            </div>
+                            
+                            <!-- Order Details -->
+                            <div class="col-lg-6 col-12 mb-30">
+                               
+                                <div class="order-details-wrapper">
+                                    <h2 class="text-right">جزئیات سفارش</h2>
+                                    <div class="order-details">
+                                        <form action="#">
+                                            <ul class="cartTotalDetail">
+                                                <li><p class="strong text-center">مجموع</p><p class="strong text-right">نام محصول</p></li>
+                                            </ul>
+                                        </form>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        
+                    </div>
+                </div>
+            </div><!-- Checkout Section End-->             
+         </section>   
+        <!-- Start Footer Area -->
+        <!-- End Blog List View Area -->
+        <!-- Start Footer Area -->
+        <footer class="footer__area footer--1">
+            <div class="col-lg-12 col-md-12" style="padding: 0px;">
+                <div class="subscribe__inner subscribe--3" style="top: 0">
+                        <div class="subs__address__content d-flex justify-content-between">
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-home" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p>تهران<br>ایران</p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="fas fa-phone" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a dir="ltr" href="#">+98 912-11111111</a></p>
+                                                <p><a dir="ltr" href="#">+98 021-22222222</a></p>
+                                </div>
+                            </div>
+                            <div class="subs__address d-flex">
+                                <div class="sbs__address__icon">
+                                    <i class="far fa-envelope" style="font-size: 40px;"></i>
+                                </div>
+                                <div class="subs__address__details">
+                                    <p><a href="#">test@email.com</a></p>
+                                                <p><a href="#">test@email.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div class="copyright bg--theme">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12">
+                            <div class="copyright__inner">
+                                <div class="cpy__right--left">
+                                    <p>@All Right Reserved.<a >WTIAU</a></p>
+                                </div>
+                                <div class="cpy__right--right">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+         <!-- Login Form -->
+       <%- include('./partials/loginRegister.modal.ejs')  %> 
+       <!-- //Login Form -->
+           <!-- Cartbox -->
+       <%- include('./partials/cartBox.modal.ejs')  %> 
+       <!-- //Cartbox -->      
+	</div><!-- //Main wrapper -->
+	
+	<!-- <div class="fakeloader"></div> -->
+
+
+
+	<!-- JS Files -->
+	<script src="js/lib/vendor/jquery-3.2.1.min.js"></script>
+    <script src="/panel/js/axios.js"></script>
+    <script src="/panel/js/jquery.easy-autocomplete.js"></script>
+    <script src="/user/custom/js/listOfCategories.js"></script>
+    <script src="/user/custom/js/loginRegister.js"></script>
+    <script src="/user/custom/js/shopIdEraeser.js"></script>
+    <script src="/user/custom/js/categoryIdEraeser.js"></script>
+	<script src="js/lib/popper.min.js"></script>
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/lib/plugins.js"></script>
+	<script src="js/lib/active.js"></script>
+    <script src="/user/custom/js/checkout.js"></script>
+    
+</body>
+
+</html>
